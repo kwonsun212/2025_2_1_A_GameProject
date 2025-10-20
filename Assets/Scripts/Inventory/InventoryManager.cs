@@ -43,14 +43,14 @@ public class InventoryManager : MonoBehaviour
 
     void CreateInventorySlots()
     {
-        for(int i =0; i < inventorySize; i++)
+        for(int i = 0; i < inventorySize; i++)
         {
             GameObject slotObj = Instantiate(itemSlotPrefab, itemSlotParent);
             InventorySlot slot = slotObj.GetComponent<InventorySlot>();
             slots.Add(slot);
         }
     }
-public void ToggleInventory()
+    public void ToggleInventory()
     {
         isInvemtoryOpen = !isInvemtoryOpen;
         inventoryUI.SetActive(isInvemtoryOpen);
