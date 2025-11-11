@@ -20,6 +20,9 @@ public class AchievementSlot : MonoBehaviour
         if (descriptionTxt != null)
             descriptionTxt.text = achievement.description;
 
+        if (iconImage != null && achievement.icon != null)
+            iconImage.sprite = achievement.icon;
+
         if (progressSlier != null)
             progressSlier.value = achievement.isUnlocked ? 1f : progress;
 
